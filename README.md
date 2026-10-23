@@ -205,7 +205,7 @@ Resultado: instala rápido, ocupa pouco espaço e a atualização do catálogo l
 
 A partir da versão **1.1.0**, o GUI-TV **se atualiza sozinho**:
 
-1. Ao abrir o app (e a cada 12 horas), ele verifica se saiu versão nova.
+1. Na primeira abertura do dia (e a cada 12 horas), ele verifica se saiu versão nova. Na primeira execução, a verificação acontece antes do cadastro da lista.
 2. Aparece o aviso **Nova versão disponível**, com as novidades. Toque em **Atualizar agora**.
 3. O app baixa o arquivo e confere se é uma versão oficial (SHA-256 e assinatura). Arquivo diferente é descartado.
 4. **Só na primeira vez**, o Android pede para permitir que o GUI-TV instale apps: ative **Permitir desta fonte** e volte ao app. A instalação continua sozinha.
