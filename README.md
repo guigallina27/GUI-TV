@@ -7,7 +7,7 @@
 **Player IPTV para Android TV, TV Box, celular e tablet.**
 Rápido, leve e feito para o controle remoto.
 
-[![Baixar APK](https://img.shields.io/badge/Baixar-APK%201.0.0-EDAA22?style=for-the-badge&logo=android&logoColor=white)](https://github.com/guigallina27/GUI-TV/releases/latest/download/GUI-TV.apk)
+[![Baixar APK](https://img.shields.io/github/v/release/guigallina27/GUI-TV?style=for-the-badge&logo=android&logoColor=white&label=Baixar%20APK&color=EDAA22)](https://github.com/guigallina27/GUI-TV/releases/latest/download/GUI-TV.apk)
 [![Android 6.0+](https://img.shields.io/badge/Android-6.0%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#requisitos)
 [![Tamanho](https://img.shields.io/badge/Tamanho-11%20MB-1B1E25?style=for-the-badge)](#por-que-é-tão-leve)
 
@@ -121,6 +121,13 @@ Vale para Android TV, Google TV, TV Box e Fire TV.
 - Controles na notificação e na tela de bloqueio, e **Picture-in-Picture** no celular.
 - Diagnóstico **"por que não toca?"** com detalhes técnicos, sem mostrar a sua senha.
 
+**Conexão**
+- **DNS público por HTTPS** (Google, Cloudflare, OpenDNS e Quad9): acha o servidor da sua lista mesmo quando a operadora não encontra ou bloqueia o endereço. Dá para escolher um deles ou usar o DNS do aparelho.
+- Vários servidores na mesma lista, com troca automática para o mais rápido.
+
+**Atualização automática**
+- O app avisa quando sai versão nova, baixa, confere a assinatura e instala. Sem precisar baixar nada pelo Downloader de novo.
+
 **Organização**
 - Vários perfis, cada um com favoritos, histórico e progresso próprios.
 - Perfil infantil e **controle parental com PIN**, bloqueio por categoria e conteúdo adulto oculto por padrão.
@@ -196,9 +203,33 @@ Resultado: instala rápido, ocupa pouco espaço e a atualização do catálogo l
 
 ## Atualizações
 
-- Baixe e instale a versão nova **por cima** da atual, pelo mesmo link. Listas, perfis, favoritos e progresso são mantidos.
-- Todas as versões são assinadas com a **mesma chave**. Se o Android recusar a atualização, a versão instalada veio de outra fonte: desinstale e instale de novo.
-- O histórico de versões fica em [Releases](https://github.com/guigallina27/GUI-TV/releases).
+A partir da versão **1.1.0**, o GUI-TV **se atualiza sozinho**:
+
+1. Ao abrir o app (e a cada 12 horas), ele verifica se saiu versão nova.
+2. Aparece o aviso **Nova versão disponível**, com as novidades. Toque em **Atualizar agora**.
+3. O app baixa o arquivo e confere se é uma versão oficial (SHA-256 e assinatura). Arquivo diferente é descartado.
+4. **Só na primeira vez**, o Android pede para permitir que o GUI-TV instale apps: ative **Permitir desta fonte** e volte ao app. A instalação continua sozinha.
+5. Confirme em **Instalar**. Listas, perfis, favoritos e progresso são mantidos.
+
+> No Android 6 e 7, a permissão é a mesma "Fontes desconhecidas" usada para instalar o app, então normalmente não aparece nada.
+> No Android 12 ou mais novo, a partir da segunda atualização feita pelo próprio app, a instalação pode acontecer sem confirmação.
+
+A verificação automática pode ser desligada em **Ajustes › Sobre › Atualizações**, onde também fica o botão **Verificar atualizações**.
+
+Quem preferir pode atualizar como na instalação: baixe pelo mesmo link e instale **por cima**. Todas as versões são assinadas com a **mesma chave**; se o Android recusar, a versão instalada veio de outra fonte: desinstale e instale de novo.
+
+O histórico de versões fica em [Releases](https://github.com/guigallina27/GUI-TV/releases).
+
+<details>
+<summary><b>Para quem instala TV Boxes para clientes</b></summary>
+
+Depois de instalar pelo ADB, libere a atualização automática de uma vez para o cliente nem ver o pedido de permissão:
+
+```bash
+adb shell appops set br.com.iptvplayer.v2 REQUEST_INSTALL_PACKAGES allow
+```
+
+</details>
 
 ---
 
@@ -206,12 +237,11 @@ Resultado: instala rápido, ocupa pouco espaço e a atualização do catálogo l
 
 Para conferir se o APK baixado é o original:
 
-| Item | Valor |
+| Item | Onde encontrar |
 |---|---|
-| Versão | 1.0.0 (código 2) |
-| SHA-256 do APK | `795add5de40eafa2a4a1b6e2991650ab79c1a98e79de3a2a03bf44f637b0ec04` |
+| SHA-256 do APK | Nas notas de cada [release](https://github.com/guigallina27/GUI-TV/releases) e no arquivo `GUI-TV.apk.sha256` |
 | Certificado | `CN=GUI-TV` |
-| SHA-256 do certificado | `7645d3a81ccd73d07408f82d79c92d367590545830b302c786fc4290dc7d7193` |
+| SHA-256 do certificado | `7645d3a81ccd73d07408f82d79c92d367590545830b302c786fc4290dc7d7193` (o mesmo em todas as versões) |
 
 ```bash
 # Windows (PowerShell)
@@ -245,6 +275,14 @@ sha256sum GUI-TV.apk
 - O app mostra o motivo: usuário ou senha incorretos, conta expirada, servidor fora do ar ou ocupado, certificado inválido e outros.
 - Toque em **Detalhes técnicos** para ver a resposta de cada servidor testado. Usuário e senha não aparecem nesses detalhes.
 - Confira os dados com o seu provedor. Senhas diferenciam maiúsculas e minúsculas.
+- Se aparecer **servidor não encontrado**, a operadora pode estar bloqueando o endereço. Em **Ajustes › Reprodução e preferências › DNS**, deixe em **Automático** ou escolha **Google** ou **Cloudflare**.
+</details>
+
+<details>
+<summary><b>A atualização automática não instala</b></summary>
+
+- Confira se o GUI-TV tem a permissão **Instalar apps desconhecidos** (Configurações › Apps › GUI-TV, ou Segurança › Fontes desconhecidas).
+- O aviso de erro mostra o motivo e um detalhe técnico. Se persistir, baixe pelo link `is.gd/guitvapk` e instale por cima.
 </details>
 
 <details>
@@ -264,5 +302,5 @@ use somente listas que você tem direito de assistir.
 
 <div align="center">
 <br>
-<sub>GUI-TV 1.0.0 · Android 6.0+ · Feito para a sala de TV</sub>
+<sub>GUI-TV · Android 6.0+ · Feito para a sala de TV</sub>
 </div>
