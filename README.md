@@ -39,7 +39,7 @@ Rápido, leve e feito para o controle remoto.
 
 | Onde | O que digitar ou abrir |
 |---|---|
-| **Downloader (TV)** | `is.gd/guitvapk` |
+| **Downloader (TV)** | Código **`6504169`** ou o endereço `is.gd/guitvapk` |
 | **Navegador (celular)** | [is.gd/guitvapk](https://is.gd/guitvapk) |
 | **Link direto** | `https://github.com/guigallina27/GUI-TV/releases/latest/download/GUI-TV.apk` |
 
@@ -53,7 +53,7 @@ Vale para Android TV, Google TV, TV Box e Fire TV.
 
 1. Na loja da TV (Play Store ou Amazon Appstore), instale o app **Downloader** (da AFTVnews).
 2. Abra o Downloader. Se ele pedir, permita o acesso a arquivos.
-3. No campo de endereço, digite **`is.gd/guitvapk`** e confirme em **Go**.
+3. No campo de endereço, digite o código **`6504169`** e confirme em **Go**. Se preferir, digite o endereço **`is.gd/guitvapk`**.
 4. Na primeira vez, o Android avisa que o Downloader não pode instalar apps. Toque em **Configurações**, ative **Permitir desta fonte** e volte.
 5. Toque em **Instalar** e depois em **Abrir**.
 6. Depois de instalado, o Downloader oferece apagar o APK baixado. Pode apagar para liberar espaço.
@@ -265,7 +265,7 @@ sha256sum GUI-TV.apk
 <details>
 <summary><b>O Downloader não abre o link</b></summary>
 
-- Digite o endereço exatamente como está: `is.gd/guitvapk`.
+- Digite o código `6504169` ou o endereço exatamente como está: `is.gd/guitvapk`.
 - Se a rede bloquear encurtadores, use o link direto do GitHub, na tabela de [Instalação rápida](#instalação-rápida).
 </details>
 
