@@ -17,14 +17,28 @@ Rápido, leve e feito para o controle remoto.
 
 ---
 
+## Novidades da versão 1.1.2
+
+- 🩺 **Teste de desempenho completo:** processador, memória, fluidez, formatos de vídeo, internet, Wi-Fi e a **velocidade real de entrega do servidor da sua lista**, com medição ao vivo na tela.
+- 🌐 **DNS desta lista:** em *Minhas listas*, veja quais DNS (do aparelho, Google, Cloudflare, OpenDNS e Quad9) encontram o servidor e em quantos milissegundos.
+- 🖥️ **Margem da tela ajustável** para TVs que cortam as bordas, e interface no tamanho certo com foco bem visível.
+- ↔️ **Esticar** e detecção automática de **faixas pretas**, lembrados por episódio.
+- ⏭️ **Pular créditos finais** por série, aprendendo onde cada uma termina.
+- ❤️ Coração de favorito mais visível e ajustes de reprodução organizados por assunto.
+- 🛠️ Corrige o app fechando ao cadastrar a lista em algumas TV Boxes.
+
+---
+
 ## Sumário
 
+- [Novidades da versão 1.1.2](#novidades-da-versão-112)
 - [Instalação rápida](#instalação-rápida)
 - [Como instalar na TV](#como-instalar-na-tv)
 - [Como instalar no celular](#como-instalar-no-celular)
 - [Primeiro uso](#primeiro-uso)
 - [Funcionalidades](#funcionalidades)
 - [Telas](#telas)
+- [Teste de desempenho](#teste-de-desempenho)
 - [Requisitos](#requisitos)
 - [Privacidade e segurança](#privacidade-e-segurança)
 - [Por que é tão leve](#por-que-é-tão-leve)
@@ -116,6 +130,8 @@ Vale para Android TV, Google TV, TV Box e Fire TV.
 
 **Player**
 - Faixas de áudio e legenda, proporção da tela e velocidade nos filmes e séries.
+- **Esticar** e detecção automática de **faixas pretas**, salvos por episódio.
+- **Pular créditos finais**, aprendendo o ponto de cada série.
 - Reconexão automática quando o sinal cai, troca de formato (TS ↔ HLS) e de servidor.
 - Áudio AC3, E-AC3, DTS e TrueHD decodificado no próprio app, mesmo em aparelhos sem suporte.
 - Controles na notificação e na tela de bloqueio, e **Picture-in-Picture** no celular.
@@ -124,12 +140,16 @@ Vale para Android TV, Google TV, TV Box e Fire TV.
 **Conexão**
 - **DNS público por HTTPS** (Google, Cloudflare, OpenDNS e Quad9): acha o servidor da sua lista mesmo quando a operadora não encontra ou bloqueia o endereço. Dá para escolher um deles ou usar o DNS do aparelho.
 - Vários servidores na mesma lista, com troca automática para o mais rápido.
+- Em **Minhas listas**, o estado de cada servidor e o bloco **DNS desta lista**, com o tempo de resposta de cada DNS.
+
+**Teste de desempenho**
+- Avalia o aparelho, a internet e o servidor da lista e diz se dá conta de HD, Full HD ou 4K. Detalhes em [Teste de desempenho](#teste-de-desempenho).
 
 **Atualização automática**
 - O app avisa quando sai versão nova, baixa, confere a assinatura e instala. Sem precisar baixar nada pelo Downloader de novo.
 
 **Organização**
-- Vários perfis, cada um com favoritos, histórico e progresso próprios.
+- Vários perfis, cada um com favoritos (marcados com ❤️ nas capas e na lista de canais), histórico e progresso próprios.
 - Perfil infantil e **controle parental com PIN**, bloqueio por categoria e conteúdo adulto oculto por padrão.
 - Busca em tudo (canais, filmes, séries e programação), tolerante a acentos e erros de digitação, inclusive por voz.
 - Várias listas no mesmo aparelho.
@@ -137,12 +157,29 @@ Vale para Android TV, Google TV, TV Box e Fire TV.
 **Feito para TV**
 - Navegação completa pelo controle remoto, com foco sempre visível.
 - Interface que se adapta a TV, tablet e celular, inclusive em telas pequenas e com fonte grande.
+- **Margem da tela ajustável** para TVs que cortam as bordas da imagem.
+- Ajustes de reprodução separados por assunto: vídeo, áudio e legendas, tela, internet e guia.
 
 ---
 
 ## Telas
 
+<table>
+<tr>
+<td width="50%"><img src="imagens/tela-inicio.jpg" alt="Tela inicial com favoritos e sugestões"><br><sub><b>Início:</b> sugestões do horário, favoritos e novidades</sub></td>
+<td width="50%"><img src="imagens/tela-ao-vivo.jpg" alt="TV ao vivo com programação"><br><sub><b>TV ao vivo:</b> categorias, programação atual e a seguir</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="imagens/tela-filmes.jpg" alt="Catálogo de filmes"><br><sub><b>Filmes:</b> categorias, ordenação e favoritos</sub></td>
+<td width="50%"><img src="imagens/tela-player.jpg" alt="Player com mini-guia"><br><sub><b>Player:</b> mini-guia do canal sem sair do vídeo</sub></td>
+</tr>
+</table>
+
+<sub>Telas capturadas com uma lista de demonstração: canais, filmes e programação são fictícios. Vídeo: <i>Big Buck Bunny</i> © Blender Foundation, licença CC BY 3.0.</sub>
+
 <div align="center">
+
+<br>
 
 <img src="imagens/abertura-tv.jpg" alt="Abertura na TV" width="72%">
 &nbsp;
@@ -163,6 +200,25 @@ Vale para Android TV, Google TV, TV Box e Fire TV.
 <sub>Banner na tela inicial da Android TV</sub>
 
 </div>
+
+---
+
+## Teste de desempenho
+
+Em **Ajustes › Desempenho do aparelho**, o GUI-TV mede em cerca de 40 segundos tudo o que influencia a reprodução e mostra o resultado em linguagem simples:
+
+| Etapa | O que mede |
+|---|---|
+| Aparelho | Processador, memória, armazenamento e fluidez da tela |
+| Formatos | Quais formatos de vídeo e áudio o aparelho decodifica por hardware |
+| Internet | Download e upload ao vivo, com o **pior segundo** da medição para revelar oscilações |
+| Wi-Fi | Banda (2,4 ou 5 GHz) e velocidade do link com o roteador |
+| Servidores da lista | Tempo de resposta de cada servidor (DNS) cadastrado |
+| Entrega do servidor | Quantos Mbps o servidor da **sua lista** entrega de verdade e quanto demora para o vídeo começar |
+
+No fim, o app indica a qualidade máxima recomendada e aponta o gargalo, por exemplo: *"o servidor da lista entregou só 8 Mbps, bem abaixo da sua internet: o gargalo é o provedor"*. O último resultado fica salvo para comparar depois.
+
+> O teste usa até 250 MB de internet. Em dados móveis, o app avisa antes de começar.
 
 ---
 
@@ -290,6 +346,20 @@ sha256sum GUI-TV.apk
 
 - Use **"Por que não toca?"** no player: o app aponta se o problema é o canal, o servidor, a conta ou o formato.
 - Aparelhos muito antigos podem não ter decodificador para alguns formatos de vídeo (por exemplo, HEVC/H.265).
+</details>
+
+<details>
+<summary><b>Os canais ou filmes travam</b></summary>
+
+- Rode o teste em **Ajustes › Desempenho do aparelho**: ele mostra se o problema é o aparelho, o Wi-Fi, a internet ou o servidor da lista.
+- Wi-Fi em 2,4 GHz ou longe do roteador costuma causar travadas. Se possível, use a rede de 5 GHz ou cabo de rede.
+- Em **Minhas listas**, confira no bloco **DNS desta lista** se algum DNS responde mais rápido e escolha-o em **Ajustes › Reprodução e preferências › Internet**.
+</details>
+
+<details>
+<summary><b>A imagem fica cortada nas bordas</b></summary>
+
+- Algumas TVs ampliam a imagem e cortam as bordas. Ajuste a **Margem da tela** em **Ajustes › Reprodução e preferências › Aplicativo e tela**.
 </details>
 
 ---
