@@ -17,7 +17,19 @@ Rápido, leve e feito para o controle remoto.
 
 ---
 
-## Novidades da versão 1.1.2
+## Novidades da versão 1.1.3
+
+- ♻️ **Lista excluída não perde mais nada:** favoritos, progresso e histórico ficam guardados por **90 dias**. Dá para restaurar a lista inteira em *Minhas listas* ou pelo botão **Restaurar lista excluída**, sem digitar nada de novo.
+- 🔁 **Restauração inteligente:** ao cadastrar de novo a mesma lista (mesmos servidores, usuário e senha), o app pergunta se você quer trazer os dados de volta.
+- 💬 **Mensagens de erro simples**, como *"Endereço não encontrado"* ou *"Usuário ou senha incorretos"*, com um **código curto** (por exemplo, `E-11`) para informar ao suporte.
+- 🖧 **Resultado de cada servidor:** em listas com vários endereços, o app mostra qual está respondendo e qual falhou, e por quê.
+- 🧯 **Fechamentos inesperados** geram um código (por exemplo, `F-1A2B3C`) e um relatório técnico em *Ajustes › Diagnóstico*, para facilitar o suporte.
+- 📺 Séries voltam ao topo da lista ao trocar de temporada, e o controle remoto não fica mais preso nos campos de texto.
+- 📡 Canais ao vivo reconectam sozinhos quando o servidor encerra a transmissão, e o guia de programação não é mais apagado por uma atualização incompleta.
+- 🛠️ Novo seletor de tipo de lista, TVs só com cabo de rede são aceitas, e várias correções de estabilidade.
+
+<details>
+<summary><b>Versão 1.1.2</b></summary>
 
 - 🩺 **Teste de desempenho completo:** processador, memória, fluidez, formatos de vídeo, internet, Wi-Fi e a **velocidade real de entrega do servidor da sua lista**, com medição ao vivo na tela.
 - 🌐 **DNS desta lista:** em *Minhas listas*, veja quais DNS (do aparelho, Google, Cloudflare, OpenDNS e Quad9) encontram o servidor e em quantos milissegundos.
@@ -27,11 +39,13 @@ Rápido, leve e feito para o controle remoto.
 - ❤️ Coração de favorito mais visível e ajustes de reprodução organizados por assunto.
 - 🛠️ Corrige o app fechando ao cadastrar a lista em algumas TV Boxes.
 
+</details>
+
 ---
 
 ## Sumário
 
-- [Novidades da versão 1.1.2](#novidades-da-versão-112)
+- [Novidades da versão 1.1.3](#novidades-da-versão-113)
 - [Instalação rápida](#instalação-rápida)
 - [Como instalar na TV](#como-instalar-na-tv)
 - [Como instalar no celular](#como-instalar-no-celular)
@@ -140,6 +154,7 @@ Vale para Android TV, Google TV, TV Box e Fire TV.
 **Conexão**
 - **DNS público por HTTPS** (Google, Cloudflare, OpenDNS e Quad9): acha o servidor da sua lista mesmo quando a operadora não encontra ou bloqueia o endereço. Dá para escolher um deles ou usar o DNS do aparelho.
 - Vários servidores na mesma lista, com troca automática para o mais rápido.
+- Ao cadastrar, o resultado de **cada servidor** (respondendo ou com o motivo da falha) e um **código de erro** curto para o suporte.
 - Em **Minhas listas**, o estado de cada servidor e o bloco **DNS desta lista**, com o tempo de resposta de cada DNS.
 
 **Teste de desempenho**
@@ -153,6 +168,7 @@ Vale para Android TV, Google TV, TV Box e Fire TV.
 - Perfil infantil e **controle parental com PIN**, bloqueio por categoria e conteúdo adulto oculto por padrão.
 - Busca em tudo (canais, filmes, séries e programação), tolerante a acentos e erros de digitação, inclusive por voz.
 - Várias listas no mesmo aparelho.
+- **Lista excluída guardada por 90 dias:** restaure a lista inteira (servidores, usuário, senha, favoritos e progresso) em *Minhas listas*, ou deixe o app reconhecer quando a mesma lista for cadastrada de novo.
 
 **Feito para TV**
 - Navegação completa pelo controle remoto, com foco sempre visível.
@@ -242,6 +258,7 @@ No fim, o app indica a qualidade máxima recomendada e aponta o gargalo, por exe
 - **HTTPS por padrão.** Conexão sem criptografia só com a sua permissão, lista por lista.
 - **PIN do controle parental protegido** e com bloqueio após tentativas erradas.
 - Mensagens de erro e detalhes técnicos **nunca mostram usuário nem senha**.
+- Relatórios de fechamento inesperado e backups de listas excluídas **ficam só no aparelho**: nada é enviado para fora.
 
 ---
 
@@ -328,8 +345,8 @@ sha256sum GUI-TV.apk
 <details>
 <summary><b>Não consigo entrar com a minha lista</b></summary>
 
-- O app mostra o motivo: usuário ou senha incorretos, conta expirada, servidor fora do ar ou ocupado, certificado inválido e outros.
-- Toque em **Detalhes técnicos** para ver a resposta de cada servidor testado. Usuário e senha não aparecem nesses detalhes.
+- O app mostra o motivo em palavras simples (usuário ou senha incorretos, conta expirada, endereço não encontrado, servidor fora do ar e outros) e um **código de erro**, como `E-30`. Informe esse código ao suporte.
+- Com vários servidores, a lista **Resultado de cada servidor** mostra qual respondeu e qual falhou. Os **Detalhes técnicos** trazem a resposta completa, sem usuário nem senha.
 - Confira os dados com o seu provedor. Senhas diferenciam maiúsculas e minúsculas.
 - Se aparecer **servidor não encontrado**, a operadora pode estar bloqueando o endereço. Em **Ajustes › Reprodução e preferências › DNS**, deixe em **Automático** ou escolha **Google** ou **Cloudflare**.
 </details>
@@ -354,6 +371,20 @@ sha256sum GUI-TV.apk
 - Rode o teste em **Ajustes › Desempenho do aparelho**: ele mostra se o problema é o aparelho, o Wi-Fi, a internet ou o servidor da lista.
 - Wi-Fi em 2,4 GHz ou longe do roteador costuma causar travadas. Se possível, use a rede de 5 GHz ou cabo de rede.
 - Em **Minhas listas**, confira no bloco **DNS desta lista** se algum DNS responde mais rápido e escolha-o em **Ajustes › Reprodução e preferências › Internet**.
+</details>
+
+<details>
+<summary><b>Apaguei uma lista sem querer</b></summary>
+
+- Em **Ajustes › Listas**, a seção **Listas excluídas** mostra as listas removidas nos últimos 90 dias. Escolha a lista e toque em **Restaurar**: ela volta com servidores, usuário, senha, favoritos e progresso.
+- No cadastro de uma lista nova, o botão **Restaurar lista excluída** faz o mesmo.
+</details>
+
+<details>
+<summary><b>O app fechou sozinho</b></summary>
+
+- Na abertura seguinte, o GUI-TV mostra um **código** (por exemplo, `F-1A2B3C`). Informe esse código ao suporte.
+- Os últimos fechamentos ficam em **Ajustes › Diagnóstico › Fechamentos inesperados**, com os detalhes técnicos. No celular, dá para **compartilhar** o relatório.
 </details>
 
 <details>
